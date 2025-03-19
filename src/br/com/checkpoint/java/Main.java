@@ -27,13 +27,11 @@ public class Main {
         System.out.println("Conta Poupança:");
         contaPoupanca.depositar(500);
         contaPoupanca.saque(300);
-        contaPoupanca.consultarRendimento(1);
         contaPoupanca.exibirSaldo();
         System.out.println("------------------------------------------------------");
         System.out.println("Conta Salário");
-        contaSalario.saqueUnico(1500);
-        contaSalario.saqueUnico(2000);
-        contaSalario.saqueUnico(300);
+        contaSalario.saque(300);
+        contaSalario.saque(2000);
         contaSalario.saque(300);
         contaSalario.exibirSaldo();
         System.out.println("------------------------------------------------------");

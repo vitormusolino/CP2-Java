@@ -10,18 +10,10 @@ public class ContaPoupanca  extends ContaBancaria {
         super(numeroConta, nomeTitular, saldo);
     }
 
-    public void consultarRendimento(int mes) {
-        if (mes <= 0 || mes > 12) {
-            System.out.println("Mês inválido");
-            return;
-        }
-        double rendimento = 0.1 * this.saldo;
-        double rendimentoTotal = (rendimento * mes);
-
-        this.saldo += rendimentoTotal;
-
-        System.out.println("O seu rendimento em " + mes + " meses foi de R$" + rendimentoTotal);
-        System.out.println("O valor total na sua conta é de R$" + this.saldo);
+    @Override
+    public void exibirSaldo() {
+        double rendimento = 0.05 * this.saldo;
+        System.out.println("Seu saldo atual é: R$" + (this.saldo + rendimento));
+        System.out.println("O seu rendimento nesse mês foi de R$" + rendimento);
     }
-
 }
