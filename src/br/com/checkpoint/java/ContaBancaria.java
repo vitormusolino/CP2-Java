@@ -34,6 +34,6 @@ public class ContaBancaria {
     }
 
     public void exibirSaldo(){
-        System.out.println("Saldo atual: R$" + saldo);
+        System.out.println("Saldo atual: R$" + this.saldo);
     }
 }
