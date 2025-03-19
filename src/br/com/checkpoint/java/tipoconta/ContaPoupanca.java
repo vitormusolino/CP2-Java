@@ -4,12 +4,12 @@ import br.com.checkpoint.java.ContaBancaria;
 
 public class ContaPoupanca  extends ContaBancaria {
 
-    private double rendimentoMensal;
-
+    //CONTRUTOR DA SUB CLASSE
     public ContaPoupanca(int numeroConta, String nomeTitular, double saldo) {
         super(numeroConta, nomeTitular, saldo);
     }
 
+    //MODIFICANDO O MÉTODO EXIBIR SALDO COM O RENDIMENTO MENSAL DO CLIENTE
     @Override
     public void exibirSaldo() {
         double rendimento = 0.05 * this.saldo;

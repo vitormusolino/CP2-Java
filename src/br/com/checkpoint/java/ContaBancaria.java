@@ -1,20 +1,21 @@
 package br.com.checkpoint.java;
 
 public class ContaBancaria {
+
+    //CRIANDO OS ATRIBUTOS DA CLASSE
+
     private int numeroConta;
     private String nomeTitular;
     protected double saldo;
 
-    public double getSaldo() {
-        return saldo;
-    }
-
+    //CRIANDO UM CONSTRUTOR PARA A SUPER CLASSE
     public ContaBancaria(int numeroConta, String nomeTitular, double saldo){
         this.numeroConta = numeroConta;
         this.nomeTitular = nomeTitular;
         this.saldo = saldo;
     }
 
+    //CRIANDO O MÉTODO DEPOSITAR
     public void depositar(double valor){
         if(valor <= 0 ){
             System.out.println("Valor inválido");
@@ -24,6 +25,7 @@ public class ContaBancaria {
         }
     }
 
+    //CRIANDO O MÉTODO SAQUE
     public void saque(int valor){
         if(valor > saldo){
             System.out.println("Saldo insuficiente para esse saque, seu valor em conta é de R$" + saldo);
@@ -33,6 +35,7 @@ public class ContaBancaria {
         }
     }
 
+    //CRIANDO O MÉTODO EXIBIR SAQUE
     public void exibirSaldo(){
         System.out.println("Saldo atual: R$" + this.saldo);
     }
